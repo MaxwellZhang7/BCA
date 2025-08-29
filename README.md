@@ -1,25 +1,8 @@
-# CAIL2020——司法考试
+# CAIL2021——司法考试
 
-该项目为 **CAIL2020——司法考试** 的代码和模型提交说明。
+该项目为 **CAIL2021——司法考试** 的代码和模型。
 
 数据集下载请访问比赛[主页](http://cail.cipsc.org.cn/)。
-
-## 数据集引用
-
-如果你要在学术论文中引用数据集，请使用如下bib
-
-```tex
-@article{zhong2019jec,
-  title={JEC-QA: A Legal-Domain Question Answering Dataset},
-  author={Zhong, Haoxi and Xiao, Chaojun and Tu, Cunchao and Zhang, Tianyang and Liu, Zhiyuan and Sun, Maosong},
-  journal={arXiv preprint arXiv:1911.12011},
-  year={2019}
-}
-```
-
-## 选手交流群
-
-QQ群：237633234
 
 ## 数据说明
 
@@ -37,28 +20,6 @@ QQ群：237633234
 - ``type``：无意义字段。
 
 实际测试数据不包含``answer``字段。
-
-## 提交的文件格式及组织形式
-
-你可以在 ``python_sample`` 中找到最简单的提交代码的格式。你需要将你所有的代码压缩为一个 ``zip`` 文件进行提交，该 ``zip`` 文件内部形式可以参看 ``python_sample/main.zip``。该 ``zip`` 文件**内部顶层**必须包含``main.py``，为运行的入口程序，我们会在该目录下使用``python3 main.py``来运行你的程序。
-
-## 代码的内容
-
-对于你的代码，你需要从``/input/``中读取数据进行预测。
-
-在该文件夹中包含**若干**文件，每个文件均由若干行``json``格式数据组成。每行的数据格式与下发数据格式完全一致。选手需要从将预测的结果输出到``/output/result.txt``中，以``json``格式输出一个字典。对于编号为``id``的题目，你需要在输出的字典中设置``id``字段，并且该字段内容为该题答案，类型为``list``。
-
-以上为 ``main.py`` 中你需要实现的内容，你可以利用 ``python_example`` 下的文件进行进一步参考。**请注意**，在加载模型的时候请尽量使用相对路径，我们会将提交的压缩包解压到``/work``路径下然后运行。
-
-**请注意，如果你想要自己通过命令行运行python代码，请按照如下命令运行**
-
-```bash
-sudo /home/user/miniconda/bin/python3 work.py
-```
-
-## 其他语言的支持
-
-如上文所述，我们现阶段只支持 ``python`` 语言的提交，但是这并不代表你不能够使用其他语言进行预测。你可以使用``python3 main.py``去调用运行其他语言的命令。但请注意，在你调用其他命令的时候请在命令前加上``sudo``以保证权限不会出问题。
 
 ## 现有的系统环境
 
@@ -267,7 +228,3 @@ filelock                         3.0.12
 tokenizers                       0.7.0
 transformers                     2.9.1
 ```
-
-等待补全中
-
-如果你有需要的环境，请联系比赛管理员进行安装。
