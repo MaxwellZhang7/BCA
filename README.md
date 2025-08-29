@@ -1,35 +1,33 @@
-# CAIL2021——司法考试
+# CAIL2020 — Judicial Examination
 
-该项目为 **CAIL2021——司法考试** 的代码和模型。
+This project provides the code and model description for **CAIL2020 — Judicial Examination**.
 
-数据集下载请访问比赛[主页](http://cail.cipsc.org.cn/)。
+## Data Description
 
-## 数据说明
+The dataset used in this task comes from the judicial examination dataset of the paper *"JEC-QA: A Legal-Domain Question Answering Dataset"*.
 
-本任务所使用的数据集来自于论文``JEC-QA: A Legal-Domain Question Answering Dataset``的司法考试数据集。
+The distributed files include ``0_train.json`` and ``1_train.json``, which correspond to **conceptual understanding questions** and **scenario analysis questions**, respectively.
 
-下发的文件包含``0_train.json,1_train.json``，分别对应概念理解题和情景分析题。
+Both files contain multiple lines, each line in JSON format, with the following fields:
 
-两个文件均包含若干行，每行数据均为json格式，包含若干字段：
+- ``answer``: Represents the answer to the question.  
+- ``id``: The unique identifier of the question.  
+- ``option_list``: Descriptions of each option in the question.  
+- ``statement``: The description of the question stem.  
+- ``subject``: Represents the category to which the question belongs (only part of the data contains this field).  
+- ``type``: A meaningless field.  
 
-- ``answer``：代表该题的答案。
-- ``id``：题目的唯一标识符。
-- ``option_list``：题目每个选项的描述。
-- ``statement``：题干的描述。
-- ``subject``：代表该问题所属的分类，仅有部分数据含有该字段。
-- ``type``：无意义字段。
+The actual test data does **not** contain the ``answer`` field.
 
-实际测试数据不包含``answer``字段。
+## Existing System Environment
 
-## 现有的系统环境
+| Software | Version |
+| -------- | ------- |
+| python   | 3.6.9   |
+| g++      | 5.4.0   |
+| gcc      | 5.4.0   |
 
-| 软件名称 | 版本号 |
-| -------- | ------ |
-| python   | 3.6.9  |
-| g++      | 5.4.0  |
-| gcc      | 5.4.0  |
-
-python库的环境列表：
+Python library environment list:
 
 ```
 Package                          Version            
